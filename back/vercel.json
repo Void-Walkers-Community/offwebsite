@@ -1,0 +1,12 @@
+{
+  "crons": [
+    {
+      "path": "/src/sync_ctf",
+      "schedule": "0 12 * * *"
+    },
+    {
+      "path": "/Members",
+      "schedule": "0 * * * *"
+    }
+  ]
+}

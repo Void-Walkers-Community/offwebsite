@@ -1,0 +1,29 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = "CTF Tracker and Member List"
+readme = "README.md"
+authors = [
+    { name = "Tanmoy", email = "oscillatorskinetic@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "beautifulsoup4>=4.14.3",
+    "fastapi>=0.135.1",
+    "httpx>=0.28.1",
+    "pygithub>=2.9.0",
+    "python-dotenv>=1.2.2",
+    "requests>=2.32.5",
+    "schedule>=1.2.2",
+    "supabase>=2.28.3",
+    "uvicorn>=0.42.0",
+]
+
+[tool.uv]
+# IMPORTANT: This tells uv to ignore the missing backend/ folder 
+# and treat this as a simple project workspace.
+package = false
+
+[tool.pytest.ini_options]
+# This helps local testing find the 'src' folder automatically
+pythonpath = ["."]
